@@ -1,0 +1,10 @@
+{
+    "name": "admin",
+    "description": "قالب پیش‌فرض بک‌اند",
+    "version": "1.0.0",
+    "assets": {
+        "css": ["css/admin.css"],
+        "js": []
+    },
+    "layout": "base.php"
+}

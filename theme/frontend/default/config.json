@@ -1,0 +1,10 @@
+{
+    "name": "default",
+    "description": "قالب پیش‌فرض فرانت‌اند",
+    "version": "1.0.0",
+    "assets": {
+        "css": ["css/style.css"],
+        "js": []
+    },
+    "layout": "base.php"
+}

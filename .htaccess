@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+
+# هدایت فایل‌های استاتیک به دایرکتوری public
+RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|ico|woff|woff2|ttf|svg|eot)$ [NC]
+RewriteRule ^(.*)$ public/$1 [L]
+
+# حذف اسلش انتهایی برای یکنواختی
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# هدایت درخواست‌های غیراستاتیک به index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php [L]

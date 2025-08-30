@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+
+# اجازه دسترسی به فایل‌های استاتیک
+RewriteCond %{REQUEST_URI} ^/assets/.*\.(css|js|png|jpg|jpeg|gif)$
+RewriteRule ^(.*)$ $1 [L]
+
+<FilesMatch "\.(css|js|png|jpg|jpeg|gif)$">
+    Header set Cache-Control "max-age=31536000, public"
+</FilesMatch>
+
+# هدایت درخواست‌ها به index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php [QSA,L]

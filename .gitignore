@@ -1,0 +1,18 @@
+# فایل‌های محیط توسعه
+.env
+storage/logs/*
+storage/cache/*
+vendor/
+
+composer.lock
+
+# فایل‌های موقت و کش
+*.log
+*.cache
+/tmp/*
+
+# فایل‌های حساس
+config/database.php
+
+# test File
+test/*
